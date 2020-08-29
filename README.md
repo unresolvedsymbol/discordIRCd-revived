@@ -1,24 +1,11 @@
-# Contributions are very welcome! AKA Maintainer(s) needed. 
-
-This started out as a personal project when I had a lot of time on my hands a while ago. 
-There is still enough room for improvement and ~~I do plan on eventually expanding this and tackling most [issues](https://github.com/creesch/discordIRCd/issues),~~ (very unlikely to happen anytime soon) however since I made this my available free time has been rather limited so I very much do welcome contributions. I also no longer use this actively myself so I have no insights about how it works regarding the discord API. 
-
-See [CONTRIBUTING.md](https://github.com/creesch/discordIRCd/blob/master/CONTRIBUTING.md) for details. 
-
-# IRC channel
-
-\#discordircd on irc.snoonet.org. 
-
-# discordIRCd
-discordIRCd is a node.js application that allows you to connect to discord with your irc client.
+# discordIRCd revived
+discordIRCd revived is a node.js application that allows you to connect to discord with your irc client.
+I started to revive this project due to there being no open source alternative to the official Discord client on Android, therefore I opted to use something like this with MrARM's Revolution IRC.
+However, the original source code being old and unmaintained seemed to make Revolution IRC crash instantly after joining.
+I refactored a good portion of the IRC server side. Although it's still a single clunky file, I don't really plan on changing that due to how simple it is. There is some slimming down to be done though.
 
 ![I really like the way I have it set up!](https://imgs.xkcd.com/comics/team_chat.png)  
 https://xkcd.com/1782/
-
-# DISCLAIMER 
-
-This is far from complete and only has the most basic IRC functionality in it to make it work with IRCCloud. 
-It also has been tested somewhat with Hexchat.
 
 ## Usage 
 
@@ -38,7 +25,10 @@ Private conversations can be initiated from any server but will be automatically
 ## Features
 
 - Users joining/leaving channels and servers. 
-- Away for idle and dnd discord users. 
+- Away for idle, DnD, and offline discord users. 
 - Mentions are translated both ways. 
 - Basic discord markdown is parsed to irc formatting. 
-
+- Built in web server for attachment URL shortening and code downloads (experimental) 
+- Message edit detection
+### TODO
+- Selfbot-like commands for editing, reacting, and deleting messages
