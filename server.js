@@ -37,11 +37,11 @@ if (configuration.attachmentServer) {
 		if (url = shortCache[request.url.substring(1)]) {
 			response.writeHead(301, {'Location': url});
 			response.end('HTTP/1.1 301 Moved Permanently');
-		}  else if (code = codeCache[request.url.substring(1)]) {
+		} else if (code = codeCache[request.url.substring(1)]) {
 			response.writeHead(200, {'Content-Type': 'application/octet-stream'});
 			response.write(code);
 			response.end();
-		}else {
+		} else {
 			response.writeHead(404);
 			response.end('HTTP/1.1 404 Not Found');
 		}

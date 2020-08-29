@@ -1,24 +1,24 @@
 {
-  "name": "discord-ircd-revived",
-  "version": "1.0.0",
-  "description": "Allows you to connect to discord with your irc client",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unresolvedsymbol/discordIRCd-revived.git"
-  },
-  "keywords": [
-    "discord",
-    "irc",
-    "ircd"
-  ],
-  "author": "unresolvedsymbol",
-  "license": "MIT",
-  "homepage": "https://github.com/unresolvedsymbol/discordIRCd-revived#readme",
-  "dependencies": {
-    "discord.js": "^12.3.0"
-  }
+	"name": "discord-ircd-revived",
+	"version": "1.0.0",
+	"description": "Allows you to connect to discord with your irc client",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/unresolvedsymbol/discordIRCd-revived.git"
+	},
+	"keywords": [
+		"discord",
+		"irc",
+		"ircd"
+	],
+	"author": "unresolvedsymbol",
+	"license": "MIT",
+	"homepage": "https://github.com/unresolvedsymbol/discordIRCd-revived#readme",
+	"dependencies": {
+		"discord.js": "^12.3.0"
+	}
 }
