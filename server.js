@@ -51,7 +51,6 @@ if (configuration.attachmentServer) {
 		if (shortCache.length >= configuration.attachmentServer.cacheSize)
 			shortCache.pop();
 		shortCache[shortened] = url;
-		console.log(url, ' -> ', shortened);
 		return `http://${configuration.attachmentServer.hostname}:${configuration.attachmentServer.listenPort}/${shortened}`;
 	};
 }
@@ -682,23 +681,23 @@ discordClient.on('message', msgHandler = msg => {
 			if (codeRegex.test(messageContent)) {
 				const codeDetails = messageContent.match(codeRegex);
 
-				// In the future I want to include the url in the message. But since the call to gist is async that doesn't fit the current structure. 
 				messageContent = messageContent.replace(replaceRegex, '');
+				const language = codeDetails[1].toLowerCase();
 				let extension;
-				let language;
-				if (codeDetails[1]) {
-					language = codeDetails[1].toLowerCase();
-					extension = (lang = langs.indexOf(language)) > -1 ? langExts[lang] || language : language;
+				let code;
+				if (lang = langs.indexOf(language) > -1) {
+					extension = langExts[lang] || language;
+					code = codeDetails[2];
 				} else {
 					extension = 'txt';
-					language = 'unknown';
+					code = codeDetails[1] + '\n' + codeDetails[2];
 				}
 
 				const fileName = authorIrcName + '_code_' + Math.random().toString(36).substring(7) + '.' + extension;
 
 				if (codeCache.length >= configuration.attachmentServer.cacheSize)
 					codeCache.pop();
-				codeCache[fileName] = codeDetails[2];
+				codeCache[fileName] = code;
 
 				ircDetails[discordServerId].channels[channelName].joined.forEach(socketID => getSocketDetails(socketID).deliver(authorIrcName + '!' + msg.author.id + '@void', 'PRIVMSG', ['#' + channelName, `http://${configuration.attachmentServer.hostname}:${configuration.attachmentServer.listenPort}/${fileName}`]));
 			}

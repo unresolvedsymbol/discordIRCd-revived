@@ -3,6 +3,8 @@ discordIRCd revived is a node.js application that allows you to connect to disco
 I started to revive this project due to there being no open source alternative to the official Discord client on Android, therefore I opted to use something like this with MrARM's Revolution IRC.
 However, the original source code being old and unmaintained seemed to make Revolution IRC crash instantly after joining.
 I refactored a good portion of the IRC server side. Although it's still a single clunky file, I don't really plan on changing that due to how simple it is. There is some slimming down to be done though.
+## Regarding discord.js user account deprecation
+Due to this unfortunate change, I may opt to rewrite this using discord.py 
 
 ![I really like the way I have it set up!](https://imgs.xkcd.com/comics/team_chat.png)  
 https://xkcd.com/1782/
