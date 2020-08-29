@@ -1,6 +1,6 @@
 {
-  "name": "discord-ircd",
-  "version": "0.5.0",
+  "name": "discord-ircd-revived",
+  "version": "1.0.0",
   "description": "Allows you to connect to discord with your irc client",
   "main": "server.js",
   "scripts": {
@@ -8,23 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creesch/discordIRCd.git"
+    "url": "git+https://github.com/unresolvedsymbol/discordIRCd-revived.git"
   },
   "keywords": [
     "discord",
     "irc",
     "ircd"
   ],
-  "author": "creesch",
+  "author": "unresolvedsymbol",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creesch/discordIRCd/issues"
-  },
-  "homepage": "https://github.com/creesch/discordIRCd#readme",
+  "homepage": "https://github.com/unresolvedsymbol/discordIRCd-revived#readme",
   "dependencies": {
     "bufferutil": "^3.0.0",
-    "discord.js": "^11.0.0",
-    "erlpack": "github:hammerandchisel/erlpack",
-    "request": "^2.81.0"
+    "discord.js": "^12.3.0"
   }
 }

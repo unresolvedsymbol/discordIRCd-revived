@@ -2,7 +2,7 @@ global.configuration = {
     DEBUG: false,
     showOfflineUsers: true, // When true all users will always be shown. Offline users will be shown as away on clients that support away-notify.
     discordToken: '<TOKEN>',
-    tlsEnabled: true,
+    tlsEnabled: false,
     tlsOptions: {
       keyPath: '/path/to/key.pem',
       certPath: '/path/to/cert.pem'
@@ -17,4 +17,9 @@ global.configuration = {
         hostname: '<HOSTNAME>',
         username: '<USERNAME>' 
     }
+	attachmentServer: {
+		listenPort: 8080,
+		hostname: '<HOSTNAME>',
+		cacheSize: 512
+	}
 };
